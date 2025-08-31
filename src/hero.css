@@ -169,6 +169,29 @@
   transform: translateY(-2px) scale(1.04);
 }
 
+.btn-resume {
+  margin-left: 1rem;
+  padding: 0.85rem 2.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 2px solid #f39c12;
+  background: transparent;
+  color: #f39c12;
+  cursor: pointer;
+  box-shadow: 0 4px 16px #f39c1244;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.btn-resume:hover {
+  background: #f39c12;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
 /* Safer mobile sizing so canvas does not go outside view, even with console */
 .hero-three {
   width: clamp(140px, 28vw, 260px);
@@ -176,3 +199,4 @@
   top: clamp(56px, 10vh, 90px);
   right: clamp(2vw, 4vw, 6vw);
 }
+

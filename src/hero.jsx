@@ -69,7 +69,7 @@ export default function Hero() {
       >
         <div>
           <h1 className="hero-title">
-            Hi, I’m <span className="hero-highlight"> Prakhar Bansal </span>{" "}
+            Hi, I'm <span className="hero-highlight"> Prakhar Bansal </span>{" "}
             <span role="img" aria-label="waving hand">
               👋
             </span>
@@ -99,6 +99,17 @@ export default function Hero() {
             >
               Contact Me
             </button>
+
+                          {/* ✅ Download Resume */}
+              <button
+                className="btn-resume"
+                onClick={() => {
+                  // Google Drive resume link
+                  window.open('https://drive.google.com/file/d/1-oYkf7pxbsrWW4cEJP5UqbS28I8IApn7/view?usp=drive_link', '_blank');
+                }}
+              >
+                📄 Resume
+              </button>
           </div>
         </div>
       </section>

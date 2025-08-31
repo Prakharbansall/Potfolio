@@ -87,18 +87,18 @@ export default function Contact() {
       )}
       {error && <div className="error-msg">❌ {error}</div>}
 
-      <div className="social-icons">
-        <SocialIcon url="https://github.com/Prakharbansall" type="github" />
-        <SocialIcon
-          url="https://www.linkedin.com/in/prakhar-m03/"
-          type="linkedin"
-        />
-        <SocialIcon url="https://x.com/PrakharBan16313" type="twitter" />
-        <SocialIcon
-          url="mailto:prakharbansal@example.com?subject=Hello%20Prakhar&body=Hi%20Prakhar,"
-          type="email"
-        />
-      </div>
+             <div className="social-icons">
+         <SocialIcon url="https://github.com/Prakharbansall" type="github" />
+         <SocialIcon
+           url="https://www.linkedin.com/in/prakhar-m03/"
+           type="linkedin"
+         />
+         <SocialIcon url="https://x.com/PrakharBan16313" type="twitter" />
+         <SocialIcon
+           url="mailto:prakharbansal@example.com?subject=Hello%20Prakhar&body=Hi%20Prakhar,"
+           type="email"
+         />
+       </div>
     </section>
   );
 }
