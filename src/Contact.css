@@ -135,13 +135,36 @@
   
   @media (max-width: 600px) {
     #contact {
-      padding: 2rem 0 1.5rem 0;
+      padding: 2rem 1rem 1.5rem 1rem;
+      max-width: 100%;
     }
     #contact form {
-      padding: 1.2rem 0.7rem 1.1rem 0.7rem;
+      padding: 1.2rem 1rem 1.1rem 1rem;
     }
     #contact h2 {
-      font-size: 1.3rem;
+      font-size: clamp(1.5rem, 5vw, 2.3rem);
+    }
+    #contact p {
+      font-size: clamp(1rem, 3vw, 1.13rem);
+    }
+    .social-icons {
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #contact {
+      padding: 1.5rem 0.5rem 1rem 0.5rem;
+    }
+    #contact form {
+      padding: 1rem 0.8rem 0.8rem 0.8rem;
+    }
+    #contact h2 {
+      font-size: clamp(1.3rem, 4vw, 1.5rem);
+    }
+    .social-icons {
+      gap: 1rem;
     }
   }
   

@@ -37,15 +37,15 @@
 
 @media (max-width: 1024px) {
   .hero-section {
-    padding-left: 10vw;
-    padding-right: clamp(140px, 28vw, 220px);
+    padding-left: 8vw;
+    padding-right: 8vw;
     padding-top: 3vh;
   }
   .hero-title {
-    font-size: 2.4rem;
+    font-size: clamp(2rem, 6vw, 2.4rem);
   }
   .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
     letter-spacing: 1.2px;
   }
   .hero-three {
@@ -58,16 +58,16 @@
 
 @media (max-width: 700px) {
   .hero-section {
-    padding-left: 6vw;
-    padding-right: clamp(110px, 26vw, 180px);
+    padding-left: 5vw;
+    padding-right: 5vw;
     padding-top: 3vh;
   }
   .hero-title {
-    font-size: 1.9rem;
+    font-size: clamp(1.6rem, 5vw, 1.9rem);
     line-height: 1.2;
   }
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     letter-spacing: 0.8px;
   }
   .hero-three {
@@ -78,17 +78,17 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
   .hero-section {
-    padding-left: 6vw;
-    padding-right: clamp(100px, 24vw, 150px);
+    padding-left: 4vw;
+    padding-right: 4vw;
     padding-top: 4vh;
   }
   .hero-title {
-    font-size: 1.6rem;
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
   }
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 2vw, 0.95rem);
     letter-spacing: 0.6px;
   }
   .hero-three {
@@ -96,6 +96,24 @@
     height: 150px;
     top: clamp(48px, 10vh, 90px);
     right: 4vw;
+  }
+}
+
+/* Button container responsive */
+@media (max-width: 600px) {
+  .hero-section > div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .btn-primary,
+  .btn-outline,
+  .btn-resume {
+    margin: 0;
+    width: 100%;
+    max-width: 250px;
   }
 }
 
@@ -127,8 +145,8 @@
 
 .btn-primary {
   margin-right: 1rem;
-  padding: 0.85rem 2.2rem;
-  font-size: 1.15rem;
+  padding: clamp(0.7rem, 2vw, 0.85rem) clamp(1.8rem, 4vw, 2.2rem);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
   font-weight: 700;
   border-radius: 999px;
   border: none;
@@ -148,8 +166,8 @@
 }
 
 .btn-outline {
-  padding: 0.85rem 2.2rem;
-  font-size: 1.15rem;
+  padding: clamp(0.7rem, 2vw, 0.85rem) clamp(1.8rem, 4vw, 2.2rem);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
   font-weight: 700;
   border-radius: 999px;
   border: 2px solid #3caea3;
@@ -171,8 +189,8 @@
 
 .btn-resume {
   margin-left: 1rem;
-  padding: 0.85rem 2.2rem;
-  font-size: 1.15rem;
+  padding: clamp(0.7rem, 2vw, 0.85rem) clamp(1.8rem, 4vw, 2.2rem);
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
   font-weight: 700;
   border-radius: 999px;
   border: 2px solid #f39c12;

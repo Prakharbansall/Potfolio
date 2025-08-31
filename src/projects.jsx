@@ -42,20 +42,20 @@ export default function Projects() {
   return (
     <section 
       style={{ 
-        padding: "4rem 2rem",
+        padding: "4rem 1rem",
         position: "relative",
         zIndex: 10,
         minHeight: "100vh"
       }} 
       id="projects-section"
     >
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}>
         <h2
           style={{
             textAlign: "center",
             marginBottom: "3rem",
             color: "#fff",
-            fontSize: "3rem",
+            fontSize: "clamp(2rem, 5vw, 3rem)",
             fontWeight: 700,
             background: "linear-gradient(135deg,rgb(78, 112, 109), #20639b)",
             WebkitBackgroundClip: "text",
@@ -71,8 +71,8 @@ export default function Projects() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-            gap: "2.5rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "clamp(1.5rem, 3vw, 2.5rem)",
             margin: "0 auto",
           }}
         >
