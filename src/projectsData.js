@@ -16,7 +16,7 @@ const PROJECTS = [
     image: "./Images/Book-Hunt.png",
     description: "Your ultimate pit stop for every book you crave.",
     tech: ["HTML5", "CSS3", "JavaScript", "Node.js", "ExpressJS"],
-    live: "https://e-commerce-zeta-orcin.vercel.app/",
+    live: "https://book-hunt-ke4daygws-prakharbansal977-9234s-projects.vercel.app/",
     github: "https://github.com/Prakharbansall/Book-Hunt",
   },
   {
