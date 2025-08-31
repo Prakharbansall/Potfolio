@@ -1,9 +1,44 @@
 // src/components/Projects/Projects.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PROJECTS from "./projectsData";
 import ProjectCard from "./ProjectCard";
+import Loader from "./Loader";
 
 export default function Projects() {
+  const [isLoading, setIsLoading] = useState(true);
+  const totalImages = PROJECTS.length;
+
+  useEffect(() => {
+    const loadImages = () => {
+      let loadedCount = 0;
+      
+      PROJECTS.forEach((project) => {
+        const img = new Image();
+        img.onload = () => {
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            // All images loaded, hide loader after a small delay
+            setTimeout(() => setIsLoading(false), 500);
+          }
+        };
+        img.onerror = () => {
+          // If image fails to load, still count it as loaded
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            setTimeout(() => setIsLoading(false), 500);
+          }
+        };
+        img.src = project.image;
+      });
+    };
+
+    loadImages();
+  }, [totalImages]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <section 
       style={{ 
