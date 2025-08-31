@@ -1,7 +1,7 @@
 // src/components/SkillStack.jsx
 import React from "react";
 import skills from "./skillsData";
-import SkillBar from "./skillBar";
+import SkillBar from "./SkillBarComponent";
 
 export default function SkillStack() {
   return (
