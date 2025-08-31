@@ -3,7 +3,7 @@ const PROJECTS = [
   {
     title: "E-Commerce Platform",
     category: "Web Apps",
-    image: "./Images/E-commerce.png",
+    image: "/Images/E-Commerce.png",
     description:
       "A full-featured e-commerce platform, complete with product listings, carts, and user management.",
     tech: ["HTML5", "CSS3", "JavaScript", "Node.js", "ExpressJS"],
@@ -13,7 +13,7 @@ const PROJECTS = [
   {
     title: "Book-Hunt",
     category: "Web Apps",
-    image: "./Images/Book-Hunt.png",
+    image: "/Images/Book-Hunt.png",
     description: "Your ultimate pit stop for every book you crave.",
     tech: ["HTML5", "CSS3", "JavaScript", "Node.js", "ExpressJS"],
     live: "https://book-hunt-ke4daygws-prakharbansal977-9234s-projects.vercel.app/",
@@ -22,7 +22,7 @@ const PROJECTS = [
   {
     title: "X&O Showdown",
     category: "Full-Stack",
-    image: "./Images/Tic-tac-Toe.png  ",
+    image: "/Images/Tic-tac-toe.png",
     description:
       "Challenge your wits and outsmart your opponent in this classic game of strategy—Tic-Tac-Toe, where every X and O counts!",
     tech: ["HTML5", "CSS3", "JavaScript"],
@@ -32,7 +32,7 @@ const PROJECTS = [
   {
     title: "Call - App",
     category: "Web Apps",
-    image: "./Images/Call-app.png",
+    image: "/Images/Call-app.png",
     description: "A real-time appointment scheduler based on individual needs.",
     tech: ["HTML5", "CSS3", "JS"],
     live: "https://prakharbansall.github.io/Call-app/",
@@ -41,7 +41,7 @@ const PROJECTS = [
   {
     title: "ClimaCast",
     category: "Full-Stack",
-    image: "./Images/Weather.png",
+    image: "/Images/Weather.png",
     description:
       "Weather: the sky’s unpredictable mood, shifting from sunshine to storms in a heartbeat.”",
     tech: ["React", "Api"],
@@ -51,7 +51,7 @@ const PROJECTS = [
   {
     title: "Friends App",
     category: "Web Apps",
-    image: "./Images/F-703.png",
+    image: "/Images/F-703.png",
     description: "Made for friends, featuring a clean and intuitive UI/UX.",
     tech: ["HTML5", "CSS3", "JS"],
     live: "https://prakharbansall.github.io/Flat-703/",
