@@ -1,0 +1,178 @@
+.hero-root {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.hero-section {
+  width: 100vw;
+  display: flex;  
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+  padding-left: 24vw;
+  
+  box-sizing: border-box;
+  background: none;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+   margin-bottom: 0; /* ✅ ensures no extra gap below hero */
+  
+}
+
+/* Fixed Three.js canvas inside hero (does not scroll) */
+.hero-three {
+  position: fixed;
+  top: clamp(56px, 12vh, 140px);
+  right: 4vw;
+  z-index: 100;
+  width: 260px;
+  height: 260px;
+  filter: drop-shadow(0 8px 32px #00e0ff88);
+}
+
+/* Hide fixed floating three.js wrappers on small screens */
+@media (max-width: 700px) {
+  .hero-three-fixed { display: none !important; }
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    padding-left: 10vw;
+    padding-right: clamp(140px, 28vw, 220px);
+    padding-top: 3vh;
+  }
+  .hero-title {
+    font-size: 2.4rem;
+  }
+  .hero-subtitle {
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+  }
+  .hero-three {
+    width: 220px;
+    height: 220px;
+    top: clamp(56px, 12vh, 120px);
+    right: 3vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-section {
+    padding-left: 6vw;
+    padding-right: clamp(110px, 26vw, 180px);
+    padding-top: 3vh;
+  }
+  .hero-title {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+  }
+  .hero-three {
+    width: 180px;
+    height: 180px;
+    top: clamp(56px, 12vh, 100px);
+    right: 2vw;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-section {
+    padding-left: 6vw;
+    padding-right: clamp(100px, 24vw, 150px);
+    padding-top: 4vh;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 0.6px;
+  }
+  .hero-three {
+    width: 150px;
+    height: 150px;
+    top: clamp(48px, 10vh, 90px);
+    right: 4vw;
+  }
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  letter-spacing: -2px;
+  line-height: 1.08;
+  text-shadow: 0 6px 32px #11224099, 0 1px 0 #3caea3;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.hero-highlight {
+  color: #3caea3;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #b2f7ef;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 12px #20639b66;
+  margin-bottom: 2.5rem;
+  font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  margin-right: 1rem;
+  padding: 0.85rem 2.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, #20639b 0%, #3caea3 100%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 16px #20639b33;
+  transition: background 0.2s, transform 0.2s;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #3caea3 0%, #20639b 100%);
+  transform: translateY(-2px) scale(1.04);
+}
+
+.btn-outline {
+  padding: 0.85rem 2.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: 2px solid #3caea3;
+  background: transparent;
+  color: #3caea3;
+  cursor: pointer;
+  box-shadow: 0 4px 16px #3caea344;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  margin-bottom: 0.5rem;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+.btn-outline:hover {
+  background: #3caea3;
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Safer mobile sizing so canvas does not go outside view, even with console */
+.hero-three {
+  width: clamp(140px, 28vw, 260px);
+  height: clamp(140px, 28vw, 260px);
+  top: clamp(56px, 10vh, 90px);
+  right: clamp(2vw, 4vw, 6vw);
+}

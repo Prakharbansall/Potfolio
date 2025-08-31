@@ -1,0 +1,124 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  min-height: 40vh;
+  width: 100vw;
+  z-index: 1;
+  position: relative;
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+ .about-container {
+   background: rgba(242, 250, 252, 0.92);
+   border-radius: 1.5rem;
+   box-shadow: 0 4px 24px rgba(40, 111, 169, 0.13);
+   padding: 2rem 1.5rem;
+   display: flex;
+   align-items: flex-start;
+   max-width: 900px;
+   width: 100%;
+   box-sizing: border-box;
+   margin: 2rem auto;
+ }
+
+  .about-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 24px #20639b33;
+    margin-right: 2.5rem;
+    border: 4px solid #3caea3;
+    background: #fff;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #20639b;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -1px;
+  }
+  
+  .about-text {
+    font-size: 1.15rem;
+    color: #233554;
+    margin: 0 0 1.2rem 0;
+    max-width: 580px;
+    line-height: 1.6;
+  }
+  
+  .about-facts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.75rem 0.9rem;
+    flex-wrap: wrap;
+    font-size: 0.98rem;
+    color: #3caea3;
+    font-weight: 600;
+  }
+  
+  .about-facts li {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #eef7fb;
+    border: 1px solid #d7e9f4;
+    box-shadow: 0 2px 8px rgba(32, 99, 155, 0.08);
+  }
+  
+  .fact-highlight {
+    color: #3caea3;
+    font-weight: 700;
+  }
+  
+  .fact-text {
+    color: #20639b;
+  }
+
+  @media (max-width: 900px) {
+    .about-section {
+      padding: 0vw;
+    }
+    .about-container {
+      padding: 1.5rem 1.2rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .about-section {
+      padding: 0vw;
+    }
+    .about-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      padding: 1.2rem 1rem;
+    }
+    .about-img {
+      margin-right: 0;
+      margin-bottom: 1rem;
+      width: 100px;
+      height: 100px;
+    }
+    .about-text {
+      font-size: 1.05rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .about-section {
+      padding: 0vw;
+    }
+    .about-img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  

@@ -1,0 +1,115 @@
+#contact {
+    padding: 3.5rem 0 2.5rem 0;
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  
+  #contact h2 {
+    color: #20639b;
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.01em;
+  }
+  
+  #contact h2 span {
+    font-size: 1.3em;
+  }
+  
+  #contact p {
+    color: #444;
+    margin-bottom: 2.2rem;
+    font-size: 1.13rem;
+  }
+  
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    background: rgba(247, 250, 253, 0.98);
+    padding: 2.2rem 2rem 1.7rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(32, 99, 155, 0.11);
+    margin-bottom: 2.3rem;
+    border: 1.5px solid #e6f0fa;
+    position: relative;
+  }
+  
+  #contact input,
+  #contact textarea {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1.5px solid #b3c6e0;
+    font-size: 1.08rem;
+    outline: none;
+    transition: border 0.2s;
+    background: #fff;
+    color: #444;
+  }
+  
+  #contact input:focus,
+  #contact textarea:focus {
+    border: 1.5px solid #0070f3 !important;
+    box-shadow: 0 0 0 2px #e6f0fa;
+    color: #444;
+  }
+  
+  #contact button {
+    background: linear-gradient(90deg, #0070f3 0%, #20639b 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 1.13rem;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(32, 99, 155, 0.13);
+    letter-spacing: 0.01em;
+    transition: background 0.2s, color 0.2s;
+    
+  }
+  
+  #contact button:disabled {
+    background: linear-gradient(90deg, #b2e0ff 0%, #e6f0fa 100%);
+    color: #20639b;
+    cursor: not-allowed;
+    box-shadow: 0 2px 8px rgba(32, 99, 155, 0.07);
+  }
+  
+  .submitted-msg {
+    position: absolute;
+    top: -2.2rem;
+    left: 10%;
+    right: 10%;
+    color: #0070f3;
+    font-weight: 600;
+    font-size: 1.08rem;
+    background: rgba(230, 240, 250, 0.95);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 8px rgba(32, 99, 155, 0.07);
+    border: 1px solid #b2e0ff;
+    z-index: 2;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  @media (max-width: 600px) {
+    #contact {
+      padding: 2rem 0 1.5rem 0;
+    }
+    #contact form {
+      padding: 1.2rem 0.7rem 1.1rem 0.7rem;
+    }
+    #contact h2 {
+      font-size: 1.3rem;
+    }
+  }
+  
