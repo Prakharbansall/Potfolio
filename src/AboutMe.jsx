@@ -14,7 +14,10 @@ export default function AboutMe() {
         <div>
           <h2 className="about-title">About Me</h2>
           <p className="about-text">
-            I’m a passionate web developer who loves building beautiful, performant, and accessible web experiences. I enjoy working across the stack and learning new technologies every day.
+            Hi, I'm Prakhar — a full-stack developer who thrives on solving real business problems with code.<br /><br />
+            My strengths are rapid prototyping, clean UI/UX, and building scalable systems that just work. I love collaborating with ambitious teams and founders who value speed, reliability, and a user-first mindset.<br /><br />
+            What drives me? The challenge of turning ideas into products that make a difference. Whether it's automating workflows, improving performance, or making apps more accessible, I bring energy and ownership to every project.<br /><br />
+            If you're a startup, agency, or business looking for someone who can deliver results (not just code), let's connect!
           </p>
 
           <ul className="about-facts">

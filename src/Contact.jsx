@@ -47,6 +47,7 @@ export default function Contact() {
       <h2>
         Let’s work together <span>🚀</span>
       </h2>
+  {/* Removed written quick links for GitHub, Resume, and LinkedIn */}
       <p>
         Have a project in mind or just want to say hi? Fill out the form below
         or connect with me on social media!
@@ -87,18 +88,12 @@ export default function Contact() {
       )}
       {error && <div className="error-msg">❌ {error}</div>}
 
-             <div className="social-icons">
-         <SocialIcon url="https://github.com/Prakharbansall" type="github" />
-         <SocialIcon
-           url="https://www.linkedin.com/in/prakhar-m03/"
-           type="linkedin"
-         />
-         <SocialIcon url="https://x.com/PrakharBan16313" type="twitter" />
-         <SocialIcon
-           url="mailto:prakharbansal@example.com?subject=Hello%20Prakhar&body=Hi%20Prakhar,"
-           type="email"
-         />
-       </div>
+      <div className="social-icons" style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', marginTop: '2rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+        <SocialIcon url="https://github.com/Prakharbansall" type="github" />
+        <SocialIcon url="https://www.linkedin.com/in/prakhar-m03/" type="linkedin" />
+        <SocialIcon url="https://x.com/PrakharBan16313" type="twitter" />
+        <SocialIcon url="mailto:prakharbansal@example.com?subject=Hello%20Prakhar&body=Hi%20Prakhar," type="email" />
+      </div>
     </section>
   );
 }

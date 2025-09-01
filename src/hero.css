@@ -2,6 +2,9 @@
   position: relative;
   width: 100vw;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero-section {
@@ -9,14 +12,33 @@
   display: flex;  
   align-items: flex-start;
   justify-content: flex-start;
-  
   padding-left: 24vw;
-  
+  padding-right: 8vw;
   box-sizing: border-box;
   background: none;
   font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-   margin-bottom: 0; /* ✅ ensures no extra gap below hero */
-  
+  margin-bottom: 0;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  background: linear-gradient(120deg, #20639b, #3caea3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 8s ease infinite;
+}
+
+.hero-tagline {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  color: #112240;
+  max-width: 800px;
 }
 
 /* Fixed Three.js canvas inside hero (does not scroll) */
@@ -28,6 +50,7 @@
   width: 260px;
   height: 260px;
   filter: drop-shadow(0 8px 32px #00e0ff88);
+  will-change: transform;
 }
 
 /* Hide fixed floating three.js wrappers on small screens */
@@ -58,17 +81,20 @@
 
 @media (max-width: 700px) {
   .hero-section {
-    padding-left: 5vw;
-    padding-right: 5vw;
-    padding-top: 3vh;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
   }
   .hero-title {
-    font-size: clamp(1.6rem, 5vw, 1.9rem);
-    line-height: 1.2;
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
   }
   .hero-subtitle {
-    font-size: clamp(0.9rem, 2.5vw, 1rem);
-    letter-spacing: 0.8px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
   }
   .hero-three {
     width: 180px;
@@ -80,22 +106,26 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding-left: 4vw;
-    padding-right: 4vw;
-    padding-top: 4vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 3vh;
   }
   .hero-title {
-    font-size: clamp(1.4rem, 4vw, 1.6rem);
+    font-size: clamp(1.6rem, 5vw, 1.8rem);
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
   }
   .hero-subtitle {
-    font-size: clamp(0.8rem, 2vw, 0.95rem);
-    letter-spacing: 0.6px;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    letter-spacing: 0.8px;
+    margin-bottom: 2.5rem;
   }
   .hero-three {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     top: clamp(48px, 10vh, 90px);
-    right: 4vw;
+    right: 3vw;
   }
 }
 
@@ -105,7 +135,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
+    width: 100%;
   }
   
   .btn-primary,
@@ -113,7 +144,23 @@
   .btn-resume {
     margin: 0;
     width: 100%;
-    max-width: 250px;
+    max-width: 280px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section > div > div {
+    gap: 1rem;
+  }
+  
+  .btn-primary,
+  .btn-outline,
+  .btn-resume {
+    max-width: 100%;
+    padding: 0.9rem 1.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -164,6 +211,8 @@
   background: linear-gradient(90deg, #3caea3 0%, #20639b 100%);
   transform: translateY(-2px) scale(1.04);
 }
+
+
 
 .btn-outline {
   padding: clamp(0.7rem, 2vw, 0.85rem) clamp(1.8rem, 4vw, 2.2rem);

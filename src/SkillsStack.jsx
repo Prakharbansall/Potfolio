@@ -10,9 +10,9 @@ export default function SkillStack() {
         background: "rgba(242,250,252,0.92)",
         borderRadius: "1.5rem",
         boxShadow: "0 4px 24px rgba(40,111,169,0.13)",
-        padding: "clamp(1.5rem, 4vw, 2rem)",
+        padding: "clamp(1.5rem, 5vw, 2rem)",
         maxWidth: 900,
-        margin: "clamp(1rem, 3vw, 2rem) auto",
+        margin: "clamp(1rem, 4vw, 2rem) auto",
         fontFamily:
           "'Poppins','Segoe UI','Roboto','Helvetica Neue',Arial,sans-serif",
         display: "block",
@@ -22,11 +22,12 @@ export default function SkillStack() {
     >
       <h2
         style={{
-          fontSize: "clamp(1.5rem, 4vw, 2rem)",
+          fontSize: "clamp(1.8rem, 5vw, 2rem)",
           fontWeight: 700,
           color: "#20639b",
-          marginBottom: "1.5rem",
+          marginBottom: "clamp(1.5rem, 4vw, 2rem)",
           letterSpacing: "-1px",
+          textAlign: "center"
         }}
       >
         Skills &amp; Stack
@@ -34,20 +35,25 @@ export default function SkillStack() {
       <div
         style={{
           display: "flex",
-          gap: "clamp(1.5rem, 4vw, 2.5rem)",
+          gap: "clamp(2rem, 5vw, 2.5rem)",
           flexWrap: "wrap",
-          justifyContent: "space-between",
+          justifyContent: "center",
         }}
       >
         {skills.map((cat) => (
-          <div key={cat.category} style={{ flex: 1, minWidth: "clamp(200px, 40vw, 220px)" }}>
+          <div key={cat.category} style={{ 
+            flex: "1 1 clamp(250px, 80vw, 300px)",
+            minWidth: "clamp(250px, 80vw, 300px)",
+            maxWidth: "100%"
+          }}>
             <h3
               style={{
                 color: "#3caea3",
                 fontWeight: 600,
-                fontSize: "clamp(1rem, 2.5vw, 1.15rem)",
-                marginBottom: "1rem",
+                fontSize: "clamp(1.1rem, 3vw, 1.15rem)",
+                marginBottom: "1.2rem",
                 letterSpacing: "1px",
+                textAlign: "center"
               }}
             >
               {cat.category}

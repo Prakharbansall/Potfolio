@@ -2,6 +2,69 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  
+  /* Mobile-first spacing variables */
+  --mobile-padding: 1rem;
+  --mobile-margin: 1.5rem;
+  --mobile-gap: 1rem;
+  --mobile-font-size: 1rem;
+  
+  /* Tablet spacing variables */
+  --tablet-padding: 1.5rem;
+  --tablet-margin: 2rem;
+  --tablet-gap: 1.5rem;
+  --tablet-font-size: 1.1rem;
+  
+  /* Desktop spacing variables */
+  --desktop-padding: 2rem;
+  --desktop-margin: 3rem;
+  --desktop-gap: 2rem;
+  --desktop-font-size: 1.2rem;
+}
+
+/* Mobile-first responsive breakpoints */
+@media (min-width: 768px) {
+  :root {
+    --mobile-padding: var(--tablet-padding);
+    --mobile-margin: var(--tablet-margin);
+    --mobile-gap: var(--tablet-gap);
+    --mobile-font-size: var(--tablet-font-size);
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --mobile-padding: var(--desktop-padding);
+    --mobile-margin: var(--desktop-margin);
+    --mobile-gap: var(--desktop-gap);
+    --mobile-font-size: var(--desktop-font-size);
+  }
+}
+
+/* Touch-friendly mobile interactions */
+@media (max-width: 768px) {
+  /* Increase touch targets */
+  button, a, input, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Better touch feedback */
+  button:active, a:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+  
+  /* Prevent text selection on buttons */
+  button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
 
 color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -16,4 +79,6 @@ body {
   min-width: 320px;
   overflow-x: hidden;
 }
+
+
 

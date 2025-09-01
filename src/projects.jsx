@@ -17,15 +17,15 @@ export default function Projects() {
         img.onload = () => {
           loadedCount++;
           if (loadedCount === totalImages) {
-            // All images loaded, hide loader after a small delay
-            setTimeout(() => setIsLoading(false), 500);
+            // All images loaded, hide loader immediately
+            setIsLoading(false);
           }
         };
         img.onerror = () => {
           // If image fails to load, still count it as loaded
           loadedCount++;
           if (loadedCount === totalImages) {
-            setTimeout(() => setIsLoading(false), 500);
+            setIsLoading(false);
           }
         };
         img.src = project.image;
@@ -42,27 +42,28 @@ export default function Projects() {
   return (
     <section 
       style={{ 
-        padding: "4rem 1rem",
+        padding: "clamp(3rem, 8vw, 4rem) clamp(1rem, 4vw, 2rem)",
         position: "relative",
         zIndex: 10,
         minHeight: "100vh"
       }} 
       id="projects-section"
     >
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 1rem" }}>
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 clamp(0.5rem, 2vw, 1rem)" }}>
         <h2
           style={{
             textAlign: "center",
-            marginBottom: "3rem",
+            marginBottom: "clamp(2rem, 6vw, 3rem)",
             color: "#fff",
-            fontSize: "clamp(2rem, 5vw, 3rem)",
+            fontSize: "clamp(2.2rem, 6vw, 3rem)",
             fontWeight: 700,
             background: "linear-gradient(135deg,rgb(78, 112, 109), #20639b)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
             textShadow: "0 4px 20px rgba(60, 174, 163, 0.3)",
-            position: "relative"
+            position: "relative",
+            lineHeight: "1.2"
           }}
         >
           My Projects
@@ -71,8 +72,8 @@ export default function Projects() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "clamp(1.5rem, 3vw, 2.5rem)",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "clamp(1.5rem, 4vw, 2.5rem)",
             margin: "0 auto",
           }}
         >

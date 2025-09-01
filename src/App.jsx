@@ -8,6 +8,7 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import Certificates from "./Certificate";
 import Loader from "./Loader";
+import "./accessibility.css";
 
 export default function App() {
   const [isAppLoading, setIsAppLoading] = useState(true);
@@ -16,7 +17,7 @@ export default function App() {
     // Simulate app initialization time
     const timer = setTimeout(() => {
       setIsAppLoading(false);
-    }, 2000); // Show loader for 2 seconds
+    }, 800); // Show loader for 800ms instead of 2 seconds
 
     return () => clearTimeout(timer);
   }, []);

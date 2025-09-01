@@ -1,0 +1,87 @@
+/* Accessibility improvements */
+:root {
+  /* High contrast color variables */
+  --focus-outline-color: #2196f3;
+  --focus-outline-width: 3px;
+  --high-contrast-text: #000000;
+  --high-contrast-background: #ffffff;
+  --high-contrast-primary: #0056b3;
+  --high-contrast-secondary: #6c757d;
+}
+
+/* Strong focus indicators */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[role="button"]:focus {
+  outline: var(--focus-outline-width) solid var(--focus-outline-color);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.4);
+}
+
+/* Skip any animations when reduced motion is preferred */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Improve contrast for project cards */
+.project-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--high-contrast-text);
+}
+
+.project-overlay {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.project-title {
+  color: var(--high-contrast-text);
+  font-weight: 600;
+}
+
+.project-description {
+  color: var(--high-contrast-text);
+}
+
+.tech-tag {
+  background-color: var(--high-contrast-primary);
+  color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.btn-live,
+.btn-github {
+  background-color: var(--high-contrast-primary);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-live:hover,
+.btn-github:hover,
+.btn-live:focus,
+.btn-github:focus {
+  background-color: #004494;
+  text-decoration: underline;
+}
+
+/* Increase touch target sizes for better accessibility */
+.btn-live,
+.btn-github,
+.tech-tag {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

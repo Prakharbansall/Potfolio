@@ -69,21 +69,25 @@ export default function Hero() {
       >
         <div>
           <h1 className="hero-title">
-            Hi, I'm <span className="hero-highlight"> Prakhar Bansal </span>{" "}
+            Hi, I'm <span className="hero-highlight">Prakhar Bansal</span>{" "}
             <span role="img" aria-label="waving hand">
               👋
             </span>
           </h1>
-          <h2 className="hero-subtitle">Web Developer | Frontend | Backend</h2>
+          <p className="hero-tagline">
+            I design and build scalable web applications that deliver exceptional user experiences
+          </p>
+          <h2 className="hero-subtitle">
+            Full-Stack Developer specializing in modern React ecosystems and robust backend architectures
+          </h2>
           <div>
             {/* ✅ navigate to /projects route */}
-            <button
+                                       <button
               className="btn-primary"
-              onClick={() =>
-                document
-                  .getElementById("projects-section")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => {
+                const element = document.getElementById("projects-section");
+                element.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
             >
               View Projects
             </button>
@@ -91,11 +95,10 @@ export default function Hero() {
             {/* ✅ navigate to /contact route */}
             <button
               className="btn-outline"
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => {
+                const element = document.getElementById("contact");
+                element.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
             >
               Contact Me
             </button>
